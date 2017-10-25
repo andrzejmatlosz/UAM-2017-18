@@ -1,21 +1,18 @@
-{
-    function* countBackword(n) {
-        while (n >= 0) {
-            yield n--;
-        }
-        throw new Error();
+function createMessages() {
+    let i = 0, messagesFuncs = []; 
+    for (i = 0 ; i <= 3 ; i++) {
+        messagesFuncs.push(
+            (function(x) {
+                return function() {
+                    console.log(x);
+                }
+            })(i)
+        );
     }
-
-    console.time('Sample timer.');
-    console.log('Sample message.');
-    console.warn('Sample warning.');
-    console.error('Sample error.');
-    console.timeEnd();
-    debugger;
-
-    for (let no of countBackword(10)) {
-        console.group(`iteration ${no}`);
-        console.log(no);
-        console.groupEnd();
-    }
+    return messagesFuncs;
 }
+
+messages = createMessages();
+messages[0](); // 4
+messages[1](); // 4
+messages[2](); // 4
