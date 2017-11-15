@@ -1,5 +1,5 @@
 import { UserService } from './user.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-shop-header',
@@ -9,6 +9,9 @@ import { Component, OnInit } from '@angular/core';
 export class ShopHeaderComponent implements OnInit {
 
   public userName: string;
+
+  @Input()
+  public title: string;
 
   constructor(private userService: UserService) {
     

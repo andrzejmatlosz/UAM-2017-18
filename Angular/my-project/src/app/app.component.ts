@@ -6,9 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  public title = 'MY-sjhop HELLO';
+  public appTitle: string = 'Title from APP component';
+  public navigation: string = 'basket';
 
-  public changeTitle() {
-    this.title = "Title changed";
+  public changeNavigationHandler(newNavigationValue: string): void {
+    this.navigation = newNavigationValue;
   }
 }

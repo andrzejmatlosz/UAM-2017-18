@@ -1,7 +1,8 @@
 :host {
-    color: red;
+    color: black;
 }
 
 header {
     display: block;
+    height: 50px;
 }

@@ -1,4 +1,15 @@
 <header>
-  <app-shop-header></app-shop-header>
+  <app-shop-header [title]="appTitle"></app-shop-header>
 </header>
 
+<app-shop-navigation 
+  (navigationChange)="changeNavigationHandler($event)">
+</app-shop-navigation>
+
+<div *ngIf="navigation === 'contact'">
+  Kontakt
+</div>
+
+<div *ngIf="navigation === 'basket'">
+  Koszyk
+</div>

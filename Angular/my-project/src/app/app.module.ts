@@ -4,11 +4,13 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { ShopHeaderComponent } from './shop-header/shop-header.component';
+import { ShopNavigationComponent } from './shop-navigation/shop-navigation.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ShopHeaderComponent
+    ShopHeaderComponent,
+    ShopNavigationComponent
   ],
   imports: [
     BrowserModule
