@@ -1,3 +1,4 @@
+import { StreamService } from '../stream.service';
 import { UserService } from './user.service';
 import { Component, OnInit, Input } from '@angular/core';
 
@@ -9,16 +10,22 @@ import { Component, OnInit, Input } from '@angular/core';
 export class ShopHeaderComponent implements OnInit {
 
   public userName: string;
+  private i: number = 0;
 
   @Input()
   public title: string;
 
-  constructor(private userService: UserService) {
+  constructor(private userService: UserService,
+              private streamService: StreamService) {
     
   }
 
   ngOnInit() {
     this.userName = this.userService.getUserName() + 'abc';
+  }
+
+  public publishData(): void {
+    this.streamService.publishData('A' + this.i++);
   }
 
 }

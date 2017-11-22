@@ -1,3 +1,4 @@
+import { StreamService } from '../stream.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ShopProductListComponent implements OnInit {
 
-  constructor() { }
+  private messages: Array<string> = [];
+
+  constructor(private streamService: StreamService) { }
 
   ngOnInit() {
+    this.streamService.getStream().subscribe((data: string) => {
+      this.messages.push(data);
+    });
   }
 
 }

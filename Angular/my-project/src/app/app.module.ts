@@ -1,3 +1,4 @@
+import { StreamService } from './stream.service';
 import { UserService } from './shop-header/user.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -17,7 +18,7 @@ import { ShopProductListComponent } from './shop-product-list/shop-product-list.
   imports: [
     BrowserModule
   ],
-  providers: [ UserService ],
-  bootstrap: [AppComponent]
+  providers: [ UserService, StreamService ],
+  bootstrap: [ AppComponent ]
 })
 export class AppModule { }
