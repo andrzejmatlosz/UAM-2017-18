@@ -23,4 +23,8 @@ export class ShopNavigationComponent implements OnInit {
     this.navigationChange.emit('contact');
   }
 
+  goToProductList() {
+    this.navigationChange.emit('productList');
+  }
+
 }
