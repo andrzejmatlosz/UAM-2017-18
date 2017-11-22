@@ -6,14 +6,4 @@
   (navigationChange)="changeNavigationHandler($event)">
 </app-shop-navigation>
 
-<div *ngIf="navigation === 'contact'">
-  Kontakt
-</div>
-
-<div *ngIf="navigation === 'basket'">
-  Koszyk
-</div>
-
-<div *ngIf="navigation === 'productList'">
-  <app-shop-product-list></app-shop-product-list>
-</div>
+<router-outlet></router-outlet>
