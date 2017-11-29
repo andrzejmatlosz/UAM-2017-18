@@ -1,5 +1,7 @@
 Products:
 
-<p *ngFor="let message of messages">
-  {{message}}
+<p *ngFor="let product of products" (click)="goToDetails(product)">
+  {{product.name}}
 </p>
+
+<router-outlet></router-outlet>

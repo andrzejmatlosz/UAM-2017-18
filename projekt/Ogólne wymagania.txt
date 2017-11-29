@@ -1,0 +1,12 @@
+Aplikacja do wymiany gier
+- Strona powitalna
+- Lista moich gier
+- Lista poszukiwanych przeze mnie gier
+- Lista gier innych u¿ytkowników z opcj¹ wyszukiwania
+- Szczegó³y gry (swojej jak i innego u¿ytkownika)
+- Szczegó³y innego u¿ytkownika (lista jego gier, gier poszukiwanych, ocena, komentarze)
+
+- Opcja wymieñ grê (mo¿liwa tylko jeœli inny u¿ytkownik poszukuje gry, któr¹ ja mam)
+- Dodawanie komentarza po transakcji
+- Dodawanie nowej gry
+- Dodawanie nowej poszukiwanej gry

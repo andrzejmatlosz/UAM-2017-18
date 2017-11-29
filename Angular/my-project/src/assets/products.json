@@ -1,0 +1,5 @@
+[
+    { "name": "P1", "id": 1, "details": "details of P1" },
+    { "name": "P2", "id": 2, "details": "details of P2" },
+    { "name": "P3", "id": 3, "details": "details of P3" }
+]

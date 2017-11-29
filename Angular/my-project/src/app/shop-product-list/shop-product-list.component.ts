@@ -1,3 +1,5 @@
+import { Router } from '@angular/router';
+import { ProductsService } from '../products.service';
 import { StreamService } from '../stream.service';
 import { Component, OnInit } from '@angular/core';
 
@@ -8,14 +10,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ShopProductListComponent implements OnInit {
 
-  private messages: Array<string> = [];
+  private messages: Array<string>;
+  public products: Array<{name: string, id: number, details: string}>;
 
-  constructor(private streamService: StreamService) { }
+  constructor(private streamService: StreamService,
+              private productsService: ProductsService,
+              private router: Router) { 
+                this.messages = [];
+              }
 
   ngOnInit() {
-    this.streamService.getStream().subscribe((data: string) => {
-      this.messages.push(data);
+    this.productsService.getProducts().subscribe((products: [any]) =>{
+      this.products = products;
     });
+  }
+
+  goToDetails(product: {name: string, id: number, details: string}) {
+    this.router.navigate(['product-list/' + product.id]);
   }
 
 }
